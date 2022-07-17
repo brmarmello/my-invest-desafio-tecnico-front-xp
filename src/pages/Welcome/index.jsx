@@ -9,6 +9,8 @@ import {
 
 import * as Animatable from 'react-native-animatable';
 
+import { useNavigation } from '@react-navigation/native';
+
 export default function Welcome() {
   return (
     <View style={styles.container}>
