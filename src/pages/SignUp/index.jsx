@@ -22,7 +22,7 @@ export default function SignIn() {
       </Animatable.View>
 
       <Animatable.View animation="fadeInUp" style={styles.containerForm}>
-        <Text style={styles.textEmail}>Nome</Text>
+        <Text style={styles.textEmail}>Nome:</Text>
         <TextInput
           placeholder="Digite seu Nome Completo..."
           style={styles.input}
@@ -42,7 +42,7 @@ export default function SignIn() {
 
         <TouchableOpacity
           style={styles.button}
-          onPress={ () => navigation.navigate('#') }
+          onPress={ () => navigation.navigate('iAccount') }
         >
           <Text style={styles.buttonText}>Cadastrar</Text>
         </TouchableOpacity>
