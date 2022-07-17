@@ -18,4 +18,3 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
-// init project
