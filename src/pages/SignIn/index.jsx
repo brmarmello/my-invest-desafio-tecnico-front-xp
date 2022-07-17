@@ -9,9 +9,11 @@ import {
 
 import * as Animatable from 'react-native-animatable';
 
-// import { useNavigation } from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
 
 export default function SignIn() {
+  const navigation = useNavigation();
+
   return (
     <View style={styles.container}>
 
@@ -41,7 +43,7 @@ export default function SignIn() {
 
         <TouchableOpacity
           style={styles.buttonRegister}
-          onPress={ () => navigation.navigate('#') }
+          onPress={ () => navigation.navigate('SignUp') }
         >
           <Text style={styles.registerText}>Não Possui uma Conta? Cadastre-se!</Text>
         </TouchableOpacity>
