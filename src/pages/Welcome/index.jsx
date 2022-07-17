@@ -3,12 +3,14 @@ import {
   View,
   Text,
   StyleSheet,
+  Image,
+  TouchableOpacity,
 } from 'react-native';
 
 export default function Welcome() {
   return (
     <View style={styles.container}>
-      <Text>Tela Boas Vindas</Text>
+      
     </View>
   );
 }
