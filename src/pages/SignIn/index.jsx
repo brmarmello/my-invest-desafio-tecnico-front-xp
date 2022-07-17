@@ -32,11 +32,17 @@ export default function SignIn() {
           style={styles.input}
         />
 
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={ () => navigation.navigate('#') }
+        >
           <Text style={styles.buttonText}>Login</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.buttonRegister}>
+        <TouchableOpacity
+          style={styles.buttonRegister}
+          onPress={ () => navigation.navigate('#') }
+        >
           <Text style={styles.registerText}>Não Possui uma Conta? Cadastre-se!</Text>
         </TouchableOpacity>
       </Animatable.View>
