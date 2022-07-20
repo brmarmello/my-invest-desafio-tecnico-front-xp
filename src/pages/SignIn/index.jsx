@@ -36,7 +36,7 @@ export default function SignIn() {
 
         <TouchableOpacity
           style={styles.button}
-          onPress={ () => navigation.navigate('#') }
+          onPress={ () => navigation.navigate('Wallet') }
         >
           <Text style={styles.buttonText}>Login</Text>
         </TouchableOpacity>
@@ -91,7 +91,7 @@ const styles = StyleSheet.create({
   button: {
     backgroundColor: '#FFC708',
     width: '100%',
-    borderRadius: 4,
+    borderRadius: 10,
     paddingVertical: 8,
     marginTop: 14,
     justifyContent: 'center',

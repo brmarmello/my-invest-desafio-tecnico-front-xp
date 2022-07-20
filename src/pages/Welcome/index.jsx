@@ -83,7 +83,7 @@ const styles = StyleSheet.create({
   button: {
     position: 'absolute',
     backgroundColor: '#FFC708',
-    borderRadius: 50,
+    borderRadius: 10,
     paddingVertical: 8,
     width: '60%',
     alignSelf: 'center',
