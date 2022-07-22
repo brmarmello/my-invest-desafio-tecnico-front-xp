@@ -1,6 +1,8 @@
 module.exports = {
   env: {
     es2021: true,
+    jest: true,
+    node: true,
   },
   extends: ['airbnb', 'plugin:react/recommended', 'prettier'],
   parserOptions: {

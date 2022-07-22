@@ -1,77 +1,74 @@
-import React from 'react';
+import React, { Component } from 'react';
+
+import { StyleSheet, View } from 'react-native';
+
 import {
-  View,
-  Text,
-  StyleSheet,
-  TextInput,
-  TouchableOpacity,
-} from 'react-native';
+  Table,
+  TableWrapper,
+  Row,
+  Rows,
+  Col,
+  Cols,
+  Cell,
+} from 'react-native-table-component';
 
-import * as Animatable from 'react-native-animatable';
-
-import { useNavigation } from '@react-navigation/native';
-
-export default function Wallet() {
-  const navigation = useNavigation();
-
-  return (
-    <View style={styles.container}>
-
-      <Animatable.View animation="fadeInLeft" delay={500} style={styles.containerHeader}>
-        <Text style={styles.message}>EM CONSTRUÇÃO</Text>
-      </Animatable.View>
-
-      <Animatable.View style={styles.containerBody}>
-        <Text style={styles.message}>EM CONSTRUÇÃO</Text>
-      </Animatable.View>
-
-      <TouchableOpacity
-          style={styles.button}
-          onPress={ () => navigation.navigate('DepositWithdrawal') }
-        >
-        <Text style={styles.buttonText}>Depósito | Retirada</Text>
-      </TouchableOpacity>
-
-    </View>
-  );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#bebebe',
-  },
-  containerHeader: {
-    marginTop: '14%',
-    marginBottom: '8%',
-    paddingStart: '1%',
-  },
-  containerBody: {
-    marginTop: '14%',
-    marginBottom: '8%',
-    paddingStart: '1%',
-  },
-  message: {
-    fontSize: 30,
-    fontWeight: 'bold',
-    color: '#000000',
-    textAlign: 'center',
-  },
-  button: {
-    position: 'absolute',
-    backgroundColor: '#000000',
-    borderRadius: 10,
-    paddingVertical: 10,
-    paddingHorizontal: 9,
-    width: '60%',
-    alignSelf: 'center',
-    bottom: '15%',
-    alignItems: 'center',
-    justifyContent: 'center'
-  },
-  buttonText: {
-    fontSize: 22,
-    color: '#f0f0f0',
-    fontWeight: 'bold'
+export default class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      HeadTable: ['Ação', 'Qtde', 'Valor (R$)', 'Negociar'],
+      DataTable: [
+        ['AZUL4', '100', '350,00', ''],
+        ['PETR4', '100', '350,00', ''],
+        ['VALE4', '100', '350,00', ''],
+      ]
+    }
   }
-})
+  render() {
+    const state = this.state;
+    return (
+      <>
+        <View>
+          {/* <Animatable.View animation="fadeInLeft" delay={500} style={styles.containerHeader}>
+            <Text style={styles.message}>Usuário: XPTO</Text>
+          </Animatable.View> */}
+        </View>
+        
+        <View style={styles.container}>
+
+          <Table>
+            <Row data={state.HeadTable} style={styles.HeadStyle} textStyle={styles.TableText} />
+            <Rows data={state.DataTable} textStyle={styles.TableText} />
+          </Table>
+
+        </View>
+        
+        <View>
+          {/* <TouchableOpacity
+            style={styles.button}
+            onPress={ () => navigation.navigate('DepositWithdrawal') }
+          >
+            <Text style={styles.buttonText}>Depósito | Retirada</Text>
+          </TouchableOpacity> */}
+        </View>
+      </>
+    )
+  }
+}
+const styles = StyleSheet.create({
+  container: { 
+    flex: 1,
+    padding: 18,
+    paddingTop: 35,
+    backgroundColor: '#ffffff' 
+  },
+  HeadStyle: { 
+    height: 50,
+    alignContent: "center",
+    backgroundColor: '#ccccca',
+  },
+  TableText: { 
+    margin: 10,
+    color: '#525355',
+  }
+});
