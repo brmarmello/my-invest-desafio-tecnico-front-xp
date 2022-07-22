@@ -11,8 +11,11 @@ import * as Animatable from 'react-native-animatable';
 
 import { useNavigation } from '@react-navigation/native';
 
+import firebase from '../../config/firebase';
+
 export default function Wallet() {
   const navigation = useNavigation();
+  const database = firebase.firestore();
 
   return (
     <View style={styles.container}>

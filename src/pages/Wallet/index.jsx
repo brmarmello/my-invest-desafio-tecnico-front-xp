@@ -12,6 +12,8 @@ import * as Animatable from 'react-native-animatable';
 
 import { useNavigation } from '@react-navigation/native';
 
+import firebase from '../../config/firebase';
+
 // import {
 //   Table,
 //   TableWrapper,
@@ -24,6 +26,7 @@ import { useNavigation } from '@react-navigation/native';
 
 export default function Walllet() {
   const navigation = useNavigation();
+  const database = firebase.firestore();
 // export default class App extends Component {
   // constructor(props) {
   //   super(props);
