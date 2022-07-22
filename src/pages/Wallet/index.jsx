@@ -1,60 +1,68 @@
-import React, { Component } from 'react';
-
-import { StyleSheet, View } from 'react-native';
-
+// import React, { Component } from 'react';
+import React from 'react';
 import {
-  Table,
-  TableWrapper,
-  Row,
-  Rows,
-  Col,
-  Cols,
-  Cell,
-} from 'react-native-table-component';
+  View,
+  Text,
+  StyleSheet,
+  TextInput,
+  TouchableOpacity,
+} from 'react-native';
 
-export default class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      HeadTable: ['Ação', 'Qtde', 'Valor (R$)', 'Negociar'],
-      DataTable: [
-        ['AZUL4', '100', '350,00', ''],
-        ['PETR4', '100', '350,00', ''],
-        ['VALE4', '100', '350,00', ''],
-      ]
-    }
-  }
-  render() {
-    const state = this.state;
-    return (
-      <>
-        <View>
-          {/* <Animatable.View animation="fadeInLeft" delay={500} style={styles.containerHeader}>
-            <Text style={styles.message}>Usuário: XPTO</Text>
-          </Animatable.View> */}
-        </View>
-        
-        <View style={styles.container}>
+// import {
+//   Table,
+//   TableWrapper,
+//   Row,
+//   Rows,
+//   Col,
+//   Cols,
+//   Cell,
+// } from 'react-native-table-component';
 
-          <Table>
-            <Row data={state.HeadTable} style={styles.HeadStyle} textStyle={styles.TableText} />
-            <Rows data={state.DataTable} textStyle={styles.TableText} />
-          </Table>
+export default function Walllet() {
+  const navigation = useNavigation();
+// export default class App extends Component {
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     HeadTable: ['Ação', 'Qtde', 'Valor (R$)', 'Negociar'],
+  //     DataTable: [
+  //       ['AZUL4', '100', '350,00', ''],
+  //       ['PETR4', '100', '350,00', ''],
+  //       ['VALE4', '100', '350,00', ''],
+  //     ]
+  //   }
+  // }
 
-        </View>
-        
-        <View>
-          {/* <TouchableOpacity
-            style={styles.button}
-            onPress={ () => navigation.navigate('DepositWithdrawal') }
-          >
-            <Text style={styles.buttonText}>Depósito | Retirada</Text>
-          </TouchableOpacity> */}
-        </View>
-      </>
-    )
-  }
-}
+  // render() {
+  //   const state = this.state;
+  return (
+    <>
+      <View>
+        <Animatable.View animation="fadeInLeft" delay={500} style={styles.containerHeader}>
+          <Text style={styles.message}>Usuário: XPTO</Text>
+        </Animatable.View>
+      </View>
+      
+      <View style={styles.container}>
+        {/* <Table>
+         <Row data={state.HeadTable} style={styles.HeadStyle} textStyle={styles.TableText} />
+         <Rows data={state.DataTable} textStyle={styles.TableText} />
+       </Table> */}
+
+      </View>
+      
+      <View>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => navigation.navigate('DepositWithdrawal')}
+        >
+          <Text style={styles.buttonText}>Depósito | Retirada</Text>
+        </TouchableOpacity>
+      </View>
+    </>
+  );
+};
+//};
 const styles = StyleSheet.create({
   container: { 
     flex: 1,
