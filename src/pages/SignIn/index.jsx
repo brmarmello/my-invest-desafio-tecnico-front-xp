@@ -13,26 +13,27 @@ import * as Animatable from 'react-native-animatable';
 
 import { useNavigation } from '@react-navigation/native';
 
-import firebase from '../../config/firebase';
+// import firebase from '../../config/firebase';
 
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 export default function SignIn() {
   const navigation = useNavigation();
-  const database = firebase.firestore();
+  // const database = firebase.firestore();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errorLogin, setErrorLogin] = useState("");
 
   const loginFirebase = () => {
     const auth = getAuth();
-    createUserWithEmailAndPassword(auth, email, password)  
+    signInWithEmailAndPassword(auth, email, password)  
   .then((userCredential) => {
     
     const user = userCredential.user;
-    navigation.navigate('Wallet', { idUser: user.uid })
+    console.log(user);
+    // navigation.navigate('Wallet', { idUser: user.uid });
   })
   .catch((error) => {
     setErrorLogin(true);
