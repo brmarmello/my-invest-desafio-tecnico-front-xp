@@ -61,6 +61,20 @@ export default function SignIn() {
           value={senha}
         />
 
+        {errorLogin === true
+        ?
+        <View style={styles.contentAlert}>
+            <MaterialCommunityIcons
+              name="alert-circle"
+              size={24}
+              color="#bdbdbd"
+            />
+            <Text style={styles.warningAlert}>Você digitou o e-mail e/ou a senha errado!</Text>
+        </View>
+        :
+        <View />
+        }
+          
         <TouchableOpacity
           style={styles.button}
           onPress={ () => navigation.navigate('Wallet') }
