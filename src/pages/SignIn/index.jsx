@@ -6,25 +6,40 @@ import {
   TextInput,
   TouchableOpacity,
   KeyboardAvoidingView,
+  Platform,
 } from 'react-native';
 
 import * as Animatable from 'react-native-animatable';
 
 import { useNavigation } from '@react-navigation/native';
 
-// import firebase from '../../config/firebase';
+import firebase from '../../config/firebase';
+
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 export default function SignIn() {
   const navigation = useNavigation();
-  // const database = firebase.firestore();
+  const database = firebase.firestore();
   const [email, setEmail] = useState("");
-  const [senha, setSenha] = useState("");
+  const [password, setPassword] = useState("");
   const [errorLogin, setErrorLogin] = useState("");
 
   const loginFirebase = () => {
-    ;
+    const auth = getAuth();
+    createUserWithEmailAndPassword(auth, email, password)  
+  .then((userCredential) => {
+    
+    const user = userCredential.user;
+    navigation.navigate('Wallet', { idUser: user.uid })
+  })
+  .catch((error) => {
+    setErrorLogin(true);
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    
+  });
   };
 
   useEffect(() => {
@@ -57,8 +72,8 @@ export default function SignIn() {
           secureTextEntry={true}
           style={styles.input}
           type="text"
-          onChangeText={(text) => setSenha(text)}
-          value={senha}
+          onChangeText={(text) => setPassword(text)}
+          value={password}
         />
 
         {errorLogin === true
@@ -75,7 +90,7 @@ export default function SignIn() {
         <View />
         }
 
-        {email === "" || senha === ""
+        {email === "" || password === ""
         ?
         <TouchableOpacity
           disabled={true}
@@ -86,18 +101,22 @@ export default function SignIn() {
         :
         <TouchableOpacity
           style={styles.button}
-          onPress={ () => navigation.navigate('Wallet') }
+          onPress={ loginFirebase }
         >
           <Text style={styles.buttonText}>Login</Text>
         </TouchableOpacity>
         }
 
-        <TouchableOpacity
-          style={styles.buttonRegister}
-          onPress={ () => navigation.navigate('SignUp') }
-        >
-          <Text style={styles.registerText}>Não Possui uma Conta? Cadastre-se!</Text>
-        </TouchableOpacity>
+        <Text style={styles.registerText}>
+          Não Possui uma Conta?
+          <Text
+            style={styles.linkSubscribe}
+            onPress={ () => navigation.navigate('SignUp') }
+          >
+            Cadastre-se!
+          </Text>
+        </Text>
+        <View style={{height:100}} />
       </Animatable.View>
 
     </KeyboardAvoidingView>
@@ -127,6 +146,7 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 25,
     paddingStart: '5%',
     paddingEnd: '5%',
+    paddingTop: Platform.OS === "ios" ? 0 : 50,
   },
   textEmail: {
     fontSize: 24,
@@ -153,6 +173,12 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: 'bold',
   },
+  contentAlert: {
+    marginTop: 20,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
   buttonRegister: {
     marginTop: 14,
     alignSelf: 'center',
@@ -161,5 +187,16 @@ const styles = StyleSheet.create({
     color: '#767e67',
     fontSize: 15,
     fontWeight: 'bold',
+    textAlign: 'center',
+    paddingTop: 20,
+  },
+  warningAlert: {
+    paddingLeft: 10,
+    color: '#bdbdbd',
+    fontSize: 16,
+  },
+  linkSubscribe: {
+    color: '#1877f2',
+    fontSize: 16,
   }
 })
