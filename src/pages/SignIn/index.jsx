@@ -64,23 +64,33 @@ export default function SignIn() {
         {errorLogin === true
         ?
         <View style={styles.contentAlert}>
-            <MaterialCommunityIcons
-              name="alert-circle"
-              size={24}
-              color="#bdbdbd"
-            />
-            <Text style={styles.warningAlert}>Você digitou o e-mail e/ou a senha errado!</Text>
+          <MaterialCommunityIcons
+            name="alert-circle"
+            size={24}
+            color="#bdbdbd"
+          />
+          <Text style={styles.warningAlert}>Você digitou o e-mail e/ou a senha errado!</Text>
         </View>
         :
         <View />
         }
-          
+
+        {email === "" || senha === ""
+        ?
+        <TouchableOpacity
+          disabled={true}
+          style={styles.button}
+        >
+          <Text style={styles.buttonText}>Login</Text>
+        </TouchableOpacity>
+        :
         <TouchableOpacity
           style={styles.button}
           onPress={ () => navigation.navigate('Wallet') }
         >
           <Text style={styles.buttonText}>Login</Text>
         </TouchableOpacity>
+        }
 
         <TouchableOpacity
           style={styles.buttonRegister}
