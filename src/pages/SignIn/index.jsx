@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   View,
   Text,
   StyleSheet,
   TextInput,
   TouchableOpacity,
+  KeyboardAvoidingView,
 } from 'react-native';
 
 import * as Animatable from 'react-native-animatable';
@@ -13,9 +14,22 @@ import { useNavigation } from '@react-navigation/native';
 
 import firebase from '../../config/firebase';
 
+import { MaterialCommunityIcons } from '@expo/vector-icons';
+
 export default function SignIn() {
   const navigation = useNavigation();
-  const database = firebase.firestore();
+  // const database = firebase.firestore();
+  const [email, setEmail] = useState("");
+  const [senha, setSenha] = useState("");
+  const [errorLogin, setErrorLogin] = useState("");
+
+  const loginFirebase = () => {
+    ;
+  };
+
+  useEffect(() => {
+    ;
+  });
 
   return (
     <View style={styles.container}>
