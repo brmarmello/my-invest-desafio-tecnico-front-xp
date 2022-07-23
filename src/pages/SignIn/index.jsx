@@ -13,9 +13,9 @@ import * as Animatable from 'react-native-animatable';
 
 import { useNavigation } from '@react-navigation/native';
 
-// import firebase from '../../config/firebase';
+import firebase from '../../config/firebase';
 
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+// import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
@@ -27,20 +27,19 @@ export default function SignIn() {
   const [errorLogin, setErrorLogin] = useState("");
 
   const loginFirebase = () => {
-    const auth = getAuth();
-    signInWithEmailAndPassword(auth, email, password)  
-  .then((userCredential) => {
-    
-    const user = userCredential.user;
-    console.log(user);
-    // navigation.navigate('Wallet', { idUser: user.uid });
-  })
-  .catch((error) => {
-    setErrorLogin(true);
-    const errorCode = error.code;
-    const errorMessage = error.message;
-    
-  });
+    // const auth = getAuth();
+    firebase.auth().signInWithEmailAndPassword(email, password)  
+    .then((userCredential) => {
+      
+      let user = userCredential.user;
+      // console.log(user);
+      // navigation.navigate('Wallet', { idUser: user.uid });
+    })
+    .catch((error) => {
+      setErrorLogin(true);
+      let errorCode = error.code;
+      let errorMessage = error.message;
+    });
   };
 
   useEffect(() => {
@@ -95,16 +94,16 @@ export default function SignIn() {
         ?
         <TouchableOpacity
           disabled={true}
-          style={styles.button}
+          style={styles.buttonOff}
         >
-          <Text style={styles.buttonText}>Login</Text>
+          <Text style={styles.buttonTextOff}>Login</Text>
         </TouchableOpacity>
         :
         <TouchableOpacity
-          style={styles.button}
+          style={styles.buttonOn}
           onPress={ loginFirebase }
         >
-          <Text style={styles.buttonText}>Login</Text>
+          <Text style={styles.buttonTextOn}>Login</Text>
         </TouchableOpacity>
         }
 
@@ -160,7 +159,16 @@ const styles = StyleSheet.create({
     marginBottom: 12,
     fontSize: 16,
   },
-  button: {
+  buttonOff: {
+    backgroundColor: '#fde490',
+    width: '100%',
+    borderRadius: 10,
+    paddingVertical: 8,
+    marginTop: 14,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  buttonOn: {
     backgroundColor: '#FFC708',
     width: '100%',
     borderRadius: 10,
@@ -169,7 +177,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  buttonText: {
+  buttonTextOff: {
+    color: '#abafa9',
+    fontSize: 24,
+    fontWeight: 'bold',
+  },
+  buttonTextOn: {
     color: '#767e67',
     fontSize: 24,
     fontWeight: 'bold',
