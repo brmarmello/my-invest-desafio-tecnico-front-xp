@@ -12,7 +12,7 @@ import * as Animatable from 'react-native-animatable';
 
 import { useNavigation } from '@react-navigation/native';
 
-import firebase from '../../config/firebase';
+// import firebase from '../../config/firebase';
 
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
@@ -29,10 +29,13 @@ export default function SignIn() {
 
   useEffect(() => {
     ;
-  });
+  }, []);
 
   return (
-    <View style={styles.container}>
+    <KeyboardAvoidingView
+      behavior={Platform.OS === "ios" ? "padding" : "height"}
+      style={styles.container}
+    >
 
       <Animatable.View animation="fadeInLeft" delay={500} style={styles.containerHeader}>
         <Text style={styles.message}>Bem-Vinda || Bem-Vindo</Text>
@@ -43,12 +46,19 @@ export default function SignIn() {
         <TextInput
           placeholder="Digite seu Melhor e-Mail..."
           style={styles.input}
+          type="text"
+          onChangeText={(text) => setEmail(text)}
+          value={email}
         />
 
         <Text style={styles.textEmail}>Senha:</Text>
         <TextInput
           placeholder="Digite sua Senha..."
+          secureTextEntry={true}
           style={styles.input}
+          type="text"
+          onChangeText={(text) => setSenha(text)}
+          value={senha}
         />
 
         <TouchableOpacity
@@ -66,7 +76,7 @@ export default function SignIn() {
         </TouchableOpacity>
       </Animatable.View>
 
-    </View>
+    </KeyboardAvoidingView>
   );
 }
 
