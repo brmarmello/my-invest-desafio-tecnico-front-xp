@@ -91,9 +91,9 @@ Aqui você terá acesso ao contexto geral de todo App, desde como instalar e rod
 <details>
   <summary><strong>⚠️ O que eu não faria novamente ou faria diferente?</strong></summary><br />
 
-  1️⃣ Utilizei apenas uma Branch, a master. Deveria ter exagerado menos no no excesso de confiança e criado um outro ramo para desenvolver e só com tudo ok atualizar para master;<br /><br />
-  2️⃣ Teria desistido do Firebase e armazenado os dados localmente antes de perder muito do valioso tempo que tinha;<br /><br />
-  3️⃣ Teria iniciado o projeto na opção Bare Workflow e não Expo Managed, para facilitar o uso de ferramentas nativas;<br /><br />
+  1️⃣ Utilizei apenas uma Branch, a master. Deveria ter exagerado menos no no excesso de confiança e criado um outro ramo para desenvolver e só com tudo ok atualizar para master;<br />
+  2️⃣ Teria desistido do Firebase e armazenado os dados localmente antes de perder muito do valioso tempo que tinha;<br />
+  3️⃣ Teria iniciado o projeto na opção Bare Workflow e não Expo Managed, para facilitar o uso de ferramentas nativas;<br />
   4️⃣ <br />
   ⚠️ ⚠️ ⚠️ TERMINAR ESSA LISTA DE COISAS!!! ⚠️ ⚠️ ⚠️
 </details>
