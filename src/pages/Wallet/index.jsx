@@ -13,6 +13,8 @@ import * as Animatable from 'react-native-animatable';
 
 import { useNavigation } from '@react-navigation/native';
 
+import database from '../../config/firebaseconfig';
+
 // import firebase from '../../config/firebase';
 
 // import {
@@ -48,7 +50,7 @@ export default function Walllet() {
   useEffect(() => {
     ;
   }, []);
-  
+
   return (
     <>
       <View>

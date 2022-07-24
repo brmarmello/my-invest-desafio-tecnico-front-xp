@@ -15,9 +15,8 @@ let firebaseConfig = {
 };
 
 firebase.initializeApp(firebaseConfig);
-// const database = firebase.firestore();
-
-export default firebase;
+const database = firebase.firestore();
+export default database;
   
 // const app = initializeApp(firebaseConfig);
 // const analytics = getAnalytics(app);
