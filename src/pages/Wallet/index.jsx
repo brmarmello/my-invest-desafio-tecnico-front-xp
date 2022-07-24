@@ -1,11 +1,12 @@
-// import React, { Component } from 'react';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   View,
   Text,
   StyleSheet,
   TextInput,
   TouchableOpacity,
+  SafeAreaView,
+  FlatList,
 } from 'react-native';
 
 import * as Animatable from 'react-native-animatable';
@@ -26,6 +27,7 @@ import { useNavigation } from '@react-navigation/native';
 
 export default function Walllet() {
   const navigation = useNavigation();
+  const [wallet, setWallet] = useState([]);
   // const database = firebase.firestore();
 // export default class App extends Component {
   // constructor(props) {

@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
   KeyboardAvoidingView,
   Platform,
+  DrawerLayoutAndroidBase,
 } from 'react-native';
 
 import * as Animatable from 'react-native-animatable';
@@ -19,8 +20,8 @@ import firebase from '../../config/firebase';
 
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
-export default function SignIn() {
-  const navigation = useNavigation();
+export default function SignIn({ navigation }) {
+  // const navigation = useNavigation();
   // const database = firebase.firestore();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -43,7 +44,11 @@ export default function SignIn() {
   };
 
   useEffect(() => {
-    ;
+    // database.collection("SignIn").onSnapshot((query) => {
+    //   const list = [];
+    //   query.forEach({ ...doc.data(), id: doc.id });
+    // });
+    // setEmail(list);
   }, []);
 
   return (
