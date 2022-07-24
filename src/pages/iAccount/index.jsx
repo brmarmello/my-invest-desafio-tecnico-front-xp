@@ -12,6 +12,8 @@ import * as Animatable from 'react-native-animatable';
 
 import { useNavigation } from '@react-navigation/native';
 
+// import firebase from '../../config/firebaseConfig;
+
 export default function SignIn() {
   const navigation = useNavigation();
 

@@ -14,7 +14,7 @@ import * as Animatable from 'react-native-animatable';
 
 import { useNavigation } from '@react-navigation/native';
 
-import firebase from '../../config/firebaseconfig';
+// import firebase from '../../config/firebaseConfig';
 
 // import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 

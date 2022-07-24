@@ -5,8 +5,9 @@ import {
   StyleSheet,
   TextInput,
   TouchableOpacity,
-  SafeAreaView,
-  FlatList,
+  KeyboardAvoidingView,
+  Platform,
+  DrawerLayoutAndroidBase,
 } from 'react-native';
 
 // import * as Animatable from 'react-native-animatable';
@@ -15,9 +16,7 @@ import { useNavigation } from '@react-navigation/native';
 
 import { FontAwesome } from '@expo/vector-icons';
 
-import database from '../../config/firebaseconfig';
-
-// import firebase from '../../config/firebase';
+//  import { firebase, database } from '../../config/firebaseConfig';
 
 // import {
 //   Table,
@@ -50,7 +49,7 @@ export default function Walllet({ navigation }) {
   //   const state = this.state;
 
   function deleteWallet(id) {
-    
+    database.collection('Wallet').doc(id).delete();
   }
 
   useEffect(() => {
@@ -76,16 +75,35 @@ export default function Walllet({ navigation }) {
           showsVerticalScrollIndicator={false}
           data={wallet}
           renderItem={(item) => {
-            <View style={styles.contextAllWallets}>
-              <TouchableOpacity
-                style={styles.deleteWallet}
-                onPress={() => {
-                  deleteWallet(item.id)
-                }}
-              >
-                
-              </TouchableOpacity>
-            </View>
+            return (
+              <View style={styles.contextAllWallets}>
+                <TouchableOpacity
+                  style={styles.deleteWallet}
+                  onPress={() => {
+                    deleteWallet(item.id)
+                  }}
+                >
+                  <FontAwesome
+                    name='star'
+                    size={23}
+                    color='#FFC708'
+                  >
+
+                  </FontAwesome>
+                </TouchableOpacity>
+                <Text
+                  style={styles.descriptionWallet}
+                  onPress={() => {
+                    navigation.navigate('DepositWithdrawal', {
+                      id: item.id,
+                      description: item.description
+                    });
+                  }}
+                >
+                  {item.description}
+                </Text>
+              </View>
+            );
           }}
         />
         <TouchableOpacity
@@ -132,6 +150,29 @@ const styles = StyleSheet.create({
   TableText: { 
     margin: 10,
     color: '#525355',
+  },
+  contextAllWallets: {
+    width: '100%',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginTop: 5,
+  },
+  deleteWallet: {
+    justifyContent: 'center',
+    paddingLeft: 15,
+  },
+  descriptionWallet: {
+    width: '75%',
+    alignContent: 'flex-start',
+    backgroundColor: '#f5f5f5cf',
+    padding: 12,
+    paddingHorizontal: 20,
+    borderRadius: 50,
+    marginBottom: 5,
+    marginRight: 15,
+    color: '#000000'
+
+
   },
   buttonNewShop: {
     position: 'absolute',
