@@ -17,6 +17,29 @@ Aqui você terá acesso ao contexto geral de todo App, desde como instalar e rod
 
   Esta é uma aplicação mobile com intuito de atuar como uma carteira digital responsável por comprar e vender ações no mercado de financeiro. Chamei ela carinhosamente de "my-invest" por ser um nome pequeno, sonoro e que representa bem sua utilidade. Obviamente é um nome fictício e não houve nenhuma pesquisa nos órgãos de registro de marcas.
 
+  Requisitos Mínimos Gerais:
+
+    Readme:
+    • explicar tomadas de decisão na abordagem do desafio;
+    • instrução para compilar e executar o projeto;
+    • outras infos importantes.
+
+  Requisitos **Mínimos** Mobile ou Front-End:
+
+    • Tela de Login;
+    • Tela de Depósito e Saque numa conta digital;
+    • Uma tela que liste todas as ações disponíveis (considere diferenciar as ações que já estão na carteira da pessoa investidora daquelas ações que ela não investiu);
+    • Tela de Compra/Venda de Ações.
+
+  Requisitos **Acionais** Mobile ou Front-End:
+
+    • Salvar localmente o último usuário logado; Data e hora do acesso (apresentando o último email logado na tela de login);
+    • Validação de email e senha;
+    • Testes unitários;
+    • Tratamento de erros;
+    • Deploy da aplicação**.
+    **Não abordado no curso da Trybe.
+
   Para o desenvolvimento utilizei:
     
   1️⃣ **JavaScript com React Native -** Nunca havia estudado ou usado esta ferramenta, mas quando descobri no processo que poderia fazer uma aplicação mobile e me candidatar para área me vi realizado e arrisquei essa ferramenta para desenvolver o Front-End, por já ter estudado React na Trybe e a linguagem ser a mesma, salvo algumas diferenças como sintaxe, libs, etc.
@@ -55,10 +78,22 @@ Aqui você terá acesso ao contexto geral de todo App, desde como instalar e rod
   <strong>Com o Expo Go instalado e aberto podemos ir para o computador!</strong>
 
   2. Clone o repositório:
-	* `git clone git@github.com:brmarmello/my-invest-desafio-tecnico-front-xp.git`.
+	*`git clone git@github.com:brmarmello/my-invest-desafio-tecnico-front-xp.git`.
   - Entre na pasta do repositório que você acabou de clonar:
 	* `cd my-invest-desafio-tecnico-front-xp`
-
   3. Instale as dependências:
 	*`npm install`
+  4. Rde no terminal este comando para iniciar a aplicação:
+  *`expo start`<br />
+  ⚠️ ⚠️ ⚠️ TERMINAR ESSA LISTA DE COMANDOS!!! ⚠️ ⚠️ ⚠️
+</details>
+
+<details>
+  <summary><strong>⚠️ O que eu não faria novamente ou faria diferente?</strong></summary><br />
+
+  1️⃣ Utilizei apenas uma Branch, a master. Deveria ter exagerado menos no no excesso de confiança e criado um outro ramo para desenvolver e só com tudo ok atualizar para master;
+  2️⃣ Teria desistido do Firebase e armazenado os dados localmente antes de perder muito do valioso tempo que tinha;
+  3️⃣ Teria iniciado o projeto na opção Bare Workflow e não Expo Managed, para facilitar o uso de ferramentas nativas;
+  4️⃣ 
+  ⚠️ ⚠️ ⚠️ TERMINAR ESSA LISTA DE COISAS!!! ⚠️ ⚠️ ⚠️
 </details>
