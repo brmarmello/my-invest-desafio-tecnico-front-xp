@@ -80,7 +80,7 @@ Aqui você terá acesso ao contexto geral de todo App, desde como instalar e rod
   2️⃣ Clone o repositório:
 	*`git clone git@github.com:brmarmello/my-invest-desafio-tecnico-front-xp.git`.
   - Entre na pasta do repositório que você acabou de clonar:
-	* `cd my-invest-desafio-tecnico-front-xp`<br />
+	* `cd my-invest-desafio-tecnico-front-xp`<br /><br />
   3️⃣ Instale as dependências:
 	*`npm install`<br />
   4️⃣ Rode no terminal este comando para iniciar a aplicação:
