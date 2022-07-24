@@ -120,4 +120,9 @@ Aqui você terá acesso ao contexto geral de todo App, desde como instalar e rod
 <img align="center" alt="Csharp-Logomarca" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg">
 <img align="center" alt="PhotoShop-Logomarca" src="https://aleen42.github.io/badges/src/photoshop.svg">
 <img align="center" alt="Illustrator-Logomarca" src="https://aleen42.github.io/badges/src/illustrator.svg">
+
+#
+<a href="https://wa.me/5521975054090" target="_blank"><img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" target="_blank"></a>
+<a href = "mailto:brmarmello@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
+<a href="https://www.linkedin.com/in/bmgi" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
 </details>
