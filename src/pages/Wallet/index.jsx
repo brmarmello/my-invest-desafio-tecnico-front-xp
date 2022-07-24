@@ -48,7 +48,9 @@ export default function Walllet() {
   //   const state = this.state;
 
   useEffect(() => {
-    ;
+    database.collection('Wallet').onSnapshot(() => {
+      ;
+    });
   }, []);
 
   return (
