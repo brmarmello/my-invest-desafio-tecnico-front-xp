@@ -47,7 +47,7 @@ export default function SignUp() {
 
         <TouchableOpacity
           style={styles.button}
-          onPress={ () => navigation.navigate('Wallet') }
+          onPress={ () => navigation.navigate('iAccount') }
         >
           <Text style={styles.buttonText}>Cadastrar</Text>
         </TouchableOpacity>

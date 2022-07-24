@@ -109,7 +109,8 @@ export default function SignIn({ navigation }) {
         :
         <TouchableOpacity
           style={styles.buttonOn}
-          onPress={ loginFirebase }
+          // onPress={ loginFirebase }
+          onPress={ () => navigation.navigate('Wallet') }
         >
           <Text style={styles.buttonTextOn}>Login</Text>
         </TouchableOpacity>
