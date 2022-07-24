@@ -9,12 +9,13 @@ import {
   FlatList,
 } from 'react-native';
 
-import * as Animatable from 'react-native-animatable';
+// import * as Animatable from 'react-native-animatable';
 
 import { useNavigation } from '@react-navigation/native';
 
+import { FontAwesome } from '@expo/vector-icons';
+
 import database from '../../config/firebaseconfig';
-import { setStatusBarBackgroundColor } from 'expo-status-bar';
 
 // import firebase from '../../config/firebase';
 
@@ -28,8 +29,8 @@ import { setStatusBarBackgroundColor } from 'expo-status-bar';
 //   Cell,
 // } from 'react-native-table-component';
 
-export default function Walllet() {
-  const navigation = useNavigation();
+export default function Walllet({ navigation }) {
+  // const navigation = useNavigation();
   const [wallet, setWallet] = useState([]);
   // const database = firebase.firestore();
 // export default class App extends Component {
@@ -48,25 +49,55 @@ export default function Walllet() {
   // render() {
   //   const state = this.state;
 
+  function deleteWallet(id) {
+    
+  }
+
   useEffect(() => {
     database.collection('Wallet').onSnapshot((query) => {
       const list = [];
       query.forEach((doc) => {
         list.push({...doc.data(), id: doc.id})
       })
-      setStatusBarBackgroundColor(list);
+      setTask(list);
     });
   }, []);
 
   return (
     <>
       <View>
-        <Animatable.View animation="fadeInLeft" delay={500} style={styles.containerHeader}>
+        {/* <Animatable.View animation="fadeInLeft" delay={500} style={styles.containerHeader}>
           <Text style={styles.message}>Usuário: XPTO</Text>
-        </Animatable.View>
+        </Animatable.View> */}
       </View>
       
       <View style={styles.container}>
+        <FlatList
+          showsVerticalScrollIndicator={false}
+          data={wallet}
+          renderItem={(item) => {
+            <View style={styles.contextAllWallets}>
+              <TouchableOpacity
+                style={styles.deleteWallet}
+                onPress={() => {
+                  deleteWallet(item.id)
+                }}
+              >
+                
+              </TouchableOpacity>
+            </View>
+          }}
+        />
+        <TouchableOpacity
+          style={styles.buttonNewShop}
+          onPress={() => navigation.navigate('buySell')}
+        >
+          <Text
+            style={styles.iconButton}
+          >
+            +
+          </Text>
+        </TouchableOpacity>
         {/* <Table>
          <Row data={state.HeadTable} style={styles.HeadStyle} textStyle={styles.TableText} />
          <Rows data={state.DataTable} textStyle={styles.TableText} />
@@ -75,12 +106,12 @@ export default function Walllet() {
       </View>
       
       <View>
-        <TouchableOpacity
+        {/* <TouchableOpacity
           style={styles.button}
           onPress={() => navigation.navigate('DepositWithdrawal')}
         >
           <Text style={styles.buttonText}>Depósito | Retirada</Text>
-        </TouchableOpacity>
+        </TouchableOpacity> */}
       </View>
     </>
   );
@@ -89,8 +120,8 @@ export default function Walllet() {
 const styles = StyleSheet.create({
   container: { 
     flex: 1,
-    padding: 18,
-    paddingTop: 35,
+    // padding: 18,
+    paddingTop: 20,
     backgroundColor: '#ffffff' 
   },
   HeadStyle: { 
@@ -101,5 +132,21 @@ const styles = StyleSheet.create({
   TableText: { 
     margin: 10,
     color: '#525355',
-  }
+  },
+  buttonNewShop: {
+    position: 'absolute',
+    width: 60,
+    height: 60,
+    bottom: 30,
+    left: 20,
+    backgroundColor: '#f92e6a',
+    borderRadius: 50,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  iconButton: {
+    color: '#ffffff',
+    fontSize: 20,
+    fontWeight: 'bold',
+  },
 });
