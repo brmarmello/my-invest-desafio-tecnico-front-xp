@@ -12,9 +12,10 @@ import {
 
 import * as Animatable from 'react-native-animatable';
 
-import { useNavigation } from '@react-navigation/native';
+// import { useNavigation } from '@react-navigation/native';
 
 // import firebase from '../../config/firebaseConfig';
+// import database from '../../config/firebaseConfig';
 
 // import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
