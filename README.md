@@ -82,9 +82,9 @@ Aqui você terá acesso ao contexto geral de todo App, desde como instalar e rod
   - Entre na pasta do repositório que você acabou de clonar:
 	* `cd my-invest-desafio-tecnico-front-xp`<br /><br />
   3️⃣ Instale as dependências:
-	*`npm install`<br />
+	*`npm install`<br /><br />
   4️⃣ Rode no terminal este comando para iniciar a aplicação:
-  *`expo start`<br />
+  *`expo start`<br /><br />
   - Após o comando, irá aparecer um QR code no terminal (para abrir o App pelo celular, opção mais rápida de rodar). Nesse momento, basta abrir o Aplicativo do Expo Go que baixou no seu celular. Abrindo o Expo Go, dentro das opções de acesso, terá uma chamada "Scan QR code" e essa é a opção indicada para abrir o projeto, e para isso basta apontar a câmera do seu celular para o QR code que está aberto no terminal e pronto! O my-invest abrirá no seu aparelho.
 
   OBS.: 👀 O procedimento de escanear o QR code só precisa ser feito uma única vez. A menos que exclua o my-invest do seu Expo Go, ele estará lá, pronto para ser clicado após um expo start e voltar na aplicação a qualquer momento.
@@ -97,4 +97,23 @@ Aqui você terá acesso ao contexto geral de todo App, desde como instalar e rod
   2️⃣ Teria desistido do Firebase e armazenado os dados localmente antes de perder muito do valioso tempo que tinha;<br />
   3️⃣ Teria iniciado o projeto na opção Bare Workflow e não Expo Managed, para facilitar o uso de ferramentas nativas;<br />
   4️⃣ Certamente após pensar com mais calma encontrarei outras coisas...
+</details>
+
+<details>
+  <summary><strong>🗣 Sobre Mim e Meus Contatos</strong></summary><br />
+
+  # 🖖 Hi guys! 👋 I'm Bruno Marmello = 'BM'
+
+- 👨‍💻 Estou em transição de carreira, migrando para área de tecnologia.
+- 🧠 Eu atualmente estudo Desenvolvimento de Software, amo Mobile e sou entusiasta e multiplicador em acessibilidade digital.
+- 💸 Possuo mais de 15 anos de experiência em Marketing, Gestão de Vendas e Administração de Negócios Diversos.
+- 📫 Moro em Niterói, região metropolitana do Rio de Janeiro - Brazil.
+- 😄 Pronomes: ele/dele.
+
+  # Tec
+
+<img src="https://aleen42.github.io/badges/src/photoshop.svg">
+<img src="https://aleen42.github.io/badges/src/illustrator.svg">
+<img src="https://aleen42.github.io/badges/src/dreamweaver.svg">
+<img src="https://aleen42.github.io/badges/src/after_effects.svg">
 </details>
