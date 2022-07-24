@@ -110,10 +110,14 @@ Aqui você terá acesso ao contexto geral de todo App, desde como instalar e rod
 - 📫 Moro em Niterói, região metropolitana do Rio de Janeiro - Brazil.
 - 😄 Pronomes: ele/dele.
 
-  # Tec
-
-<img src="https://aleen42.github.io/badges/src/photoshop.svg">
-<img src="https://aleen42.github.io/badges/src/illustrator.svg">
-<img src="https://aleen42.github.io/badges/src/dreamweaver.svg">
-<img src="https://aleen42.github.io/badges/src/after_effects.svg">
+# 
+<img align="center" alt="JavaScript-Logomarca" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
+<img align="center" alt="TypeScript-Logomarca" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-plain.svg">
+<img align="center" alt="React-Logomarca" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg">
+<img align="center" alt="HTML-Logomarca" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
+<img align="center" alt="CSS-Logomarca" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
+<img align="center" alt="Python-Logomarca" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg">
+<img align="center" alt="Csharp-Logomarca" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg">
+<img align="center" alt="PhotoShop-Logomarca" src="https://aleen42.github.io/badges/src/photoshop.svg">
+<img align="center" alt="Illustrator-Logomarca" src="https://aleen42.github.io/badges/src/illustrator.svg">
 </details>
