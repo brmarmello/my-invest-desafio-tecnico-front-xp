@@ -44,6 +44,11 @@ export default function Walllet() {
 
   // render() {
   //   const state = this.state;
+
+  useEffect(() => {
+    ;
+  }, []);
+  
   return (
     <>
       <View>
