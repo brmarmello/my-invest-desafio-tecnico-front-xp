@@ -71,21 +71,23 @@ Aqui você terá acesso ao contexto geral de todo App, desde como instalar e rod
 <details>
   <summary><strong>🤷🏽‍♀️ Como Instalar e Rodar o App "my-invest"?</strong></summary><br />
 
-  1. No seu celular, acesse a loja de aplicativos para o seu sistema operacional, Baixe e Instale o App Expo Go;
+  1️⃣ No seu celular, acesse a loja de aplicativos para o seu sistema operacional, Baixe e Instale o App Expo Go;
   [Android Play Store](https://play.google.com/store/apps/details?id=host.exp.exponent&hl=pt_BR&gl=US).<br />
   [iOS App Store](https://apps.apple.com/br/app/expo-go/id982107779).
   
   <strong>Com o Expo Go instalado e aberto podemos ir para o computador!</strong>
 
-  2. Clone o repositório:
+  2️⃣ Clone o repositório:
 	*`git clone git@github.com:brmarmello/my-invest-desafio-tecnico-front-xp.git`.
   - Entre na pasta do repositório que você acabou de clonar:
 	* `cd my-invest-desafio-tecnico-front-xp`
-  3. Instale as dependências:
+  3️⃣ Instale as dependências:
 	*`npm install`
-  4. Rde no terminal este comando para iniciar a aplicação:
+  4️⃣ Rode no terminal este comando para iniciar a aplicação:
   *`expo start`<br />
-  ⚠️ ⚠️ ⚠️ TERMINAR ESSA LISTA DE COMANDOS!!! ⚠️ ⚠️ ⚠️
+  - Após o comando, irá aparecer um QR code no terminal (para abrir o App pelo celular, opção mais rápida de rodar). Nesse momento, basta abrir o Aplicativo do Expo Go que baixou no seu celular. Abrindo o Expo Go, dentro das opções de acesso, terá uma chamada "Scan QR code" e essa é a opção indicada para abrir o projeto, e para isso basta apontar a câmera do seu celular para o QR code que está aberto no terminal e pronto! O my-invest abrirá no seu aparelho.
+
+  OBS.: 👀 O procedimento de escanear o QR code só precisa ser feito uma única vez. A menos que exclua o my-invest do seu Expo Go, ele estará lá, pronto para ser clicado após um expo start e voltar na aplicação a qualquer momento.
 </details>
 
 <details>
@@ -94,6 +96,5 @@ Aqui você terá acesso ao contexto geral de todo App, desde como instalar e rod
   1️⃣ Utilizei apenas uma Branch, a master. Deveria ter exagerado menos no no excesso de confiança e criado um outro ramo para desenvolver e só com tudo ok atualizar para master;<br />
   2️⃣ Teria desistido do Firebase e armazenado os dados localmente antes de perder muito do valioso tempo que tinha;<br />
   3️⃣ Teria iniciado o projeto na opção Bare Workflow e não Expo Managed, para facilitar o uso de ferramentas nativas;<br />
-  4️⃣ <br />
-  ⚠️ ⚠️ ⚠️ TERMINAR ESSA LISTA DE COISAS!!! ⚠️ ⚠️ ⚠️
+  4️⃣ Certamente após pensar com mais calma encontrarei outras coisas...
 </details>
