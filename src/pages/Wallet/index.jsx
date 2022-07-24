@@ -14,6 +14,7 @@ import * as Animatable from 'react-native-animatable';
 import { useNavigation } from '@react-navigation/native';
 
 import database from '../../config/firebaseconfig';
+import { setStatusBarBackgroundColor } from 'expo-status-bar';
 
 // import firebase from '../../config/firebase';
 
@@ -48,8 +49,12 @@ export default function Walllet() {
   //   const state = this.state;
 
   useEffect(() => {
-    database.collection('Wallet').onSnapshot(() => {
-      ;
+    database.collection('Wallet').onSnapshot((query) => {
+      const list = [];
+      query.forEach((doc) => {
+        list.push({...doc.data(), id: doc.id})
+      })
+      setStatusBarBackgroundColor(list);
     });
   }, []);
 
