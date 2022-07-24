@@ -80,9 +80,9 @@ Aqui você terá acesso ao contexto geral de todo App, desde como instalar e rod
   2️⃣ Clone o repositório:
 	*`git clone git@github.com:brmarmello/my-invest-desafio-tecnico-front-xp.git`.
   - Entre na pasta do repositório que você acabou de clonar:
-	* `cd my-invest-desafio-tecnico-front-xp`
+	* `cd my-invest-desafio-tecnico-front-xp`<br />
   3️⃣ Instale as dependências:
-	*`npm install`
+	*`npm install`<br />
   4️⃣ Rode no terminal este comando para iniciar a aplicação:
   *`expo start`<br />
   - Após o comando, irá aparecer um QR code no terminal (para abrir o App pelo celular, opção mais rápida de rodar). Nesse momento, basta abrir o Aplicativo do Expo Go que baixou no seu celular. Abrindo o Expo Go, dentro das opções de acesso, terá uma chamada "Scan QR code" e essa é a opção indicada para abrir o projeto, e para isso basta apontar a câmera do seu celular para o QR code que está aberto no terminal e pronto! O my-invest abrirá no seu aparelho.
