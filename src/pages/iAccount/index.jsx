@@ -8,6 +8,8 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
+import styles from './style';
+
 import * as Animatable from 'react-native-animatable';
 
 import { useNavigation } from '@react-navigation/native';
@@ -27,21 +29,3 @@ export default function SignIn() {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#000000',
-  },
-  containerHeader: {
-    marginTop: '14%',
-    marginBottom: '8%',
-    paddingStart: '1%',
-  },
-  message: {
-    fontSize: 30,
-    fontWeight: 'bold',
-    color: '#EFEEEE',
-    textAlign: 'center',
-  }
-})
